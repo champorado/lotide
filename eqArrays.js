@@ -14,16 +14,18 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = function(array1, array2) {
-  //takes in two arrays and returns true or false, based on a perfect match.
-  for (let i = 0; i < array1.length; i++) {
-    for (let j = 0; j < array2.length; j++) {
-      if (array1[i] === array2[j]) {
-        return true;
-      } else {
-        return false;
-      }
-    }
+  if (array1.length !== array2.length){
+    return false;
   }
+  for (let i = 0; i < array1.length; i++){
+    const num1 = array1[i];
+    const num2 = array2[i];
+
+    if (num1 !== num2){
+      return false;
+    } 
+  }
+  return true;
 };
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
