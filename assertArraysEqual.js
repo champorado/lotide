@@ -15,7 +15,7 @@ const eqArrays = function(array1, array2) {
 };
 
 //assertArraysEqual which will take in two arrays and console.log an appropriate message to the console.
-const ArraysEqual = function(firstArray, secondArray) {
+const assertArraysEqual = function(firstArray, secondArray) {
   if (eqArrays(firstArray, secondArray) === true){
     console.log('✅ test passed') // emojis make it stand out
   } else {
